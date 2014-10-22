@@ -11,6 +11,8 @@
 #include <vector>
 
 #include "Flashcard.h"
+#include "FlashcardDeck.h"
+#include "FlashcardDecks.h"
 
 #ifndef CONFIGURATIONOBJECT_H_
 #define CONFIGURATIONOBJECT_H_
@@ -18,11 +20,13 @@
 class ConfigurationObject
     {
 public:
-    ConfigurationObject(std::vector<Flashcard> &flashcards);
+    ConfigurationObject(FlashcardDecks &flashcard_decks);
     virtual ~ConfigurationObject();
 
-private:
-    std::vector<Flashcard> _flashcards;
+    void getFlashcardDecks(FlashcardDecks &flashcard_decks);
+
+//private:
+//    std::vector<FlashcardDeck> _flashcard_decks;
     };
 
 #endif /* CONFIGURATIONOBJECT_H_ */
