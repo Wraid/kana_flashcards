@@ -12,7 +12,7 @@
 
 FlashcardDecks::FlashcardDecks(){}
 
-FlashcardDeck FlashcardDecks::getDeck(std::string deck_name)
+FlashcardDeck FlashcardDecks::getDeck(const std::string deck_name)
     {
 
     for (auto deck_entry : *this)

@@ -8,7 +8,7 @@
 
 #include "Flashcard.h"
 
-Flashcard::Flashcard(std::string symbol, std::string translation) :
+Flashcard::Flashcard(const std::string symbol, const std::string translation) :
     _symbol(symbol), _translation(translation) {}
 
 std::string Flashcard::getSymbol()
@@ -19,6 +19,15 @@ std::string Flashcard::getSymbol()
 std::string Flashcard::getTranslation()
     {
     return _translation;
+    }
+
+bool Flashcard::isEmpty()
+    {
+    if (   "" == this->getSymbol()
+        && "" == this->getTranslation())
+        return true;
+    else
+        return false;
     }
 
 Flashcard::~Flashcard()

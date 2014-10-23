@@ -10,8 +10,6 @@
 
 #include <vector>
 
-#include "Flashcard.h"
-#include "FlashcardDeck.h"
 #include "FlashcardDecks.h"
 
 #ifndef CONFIGURATIONOBJECT_H_
@@ -24,9 +22,6 @@ public:
     virtual ~ConfigurationObject();
 
     void getFlashcardDecks(FlashcardDecks &flashcard_decks);
-
-//private:
-//    std::vector<FlashcardDeck> _flashcard_decks;
     };
 
 #endif /* CONFIGURATIONOBJECT_H_ */

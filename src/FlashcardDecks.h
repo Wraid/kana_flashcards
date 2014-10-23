@@ -19,7 +19,7 @@ public:
     FlashcardDecks();
     virtual ~FlashcardDecks();
 
-    FlashcardDeck getDeck(std::string deck_name);
+    FlashcardDeck getDeck(const std::string deck_name);
     };
 
 #endif /* FLASHCARDDECKS_H_ */

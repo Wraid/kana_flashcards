@@ -7,16 +7,18 @@
  *               of the application.
  */
 
+#include "FlashcardDecks.h"
+
 #ifndef GUI_H_
 #define GUI_H_
 
 class GraphicalEngine
     {
 public:
-    GraphicalEngine();
+    GraphicalEngine(const FlashcardDecks &flashcard_decks, FlashcardDeck &selected_deck, Flashcard &selected_card);
     virtual ~GraphicalEngine();
 
-    void startGUI();
+    void getSelectedDeck(const FlashcardDecks &flashcard_decks, FlashcardDeck &selected_deck);
     };
 
 #endif /* GUI_H_ */

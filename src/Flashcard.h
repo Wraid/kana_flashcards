@@ -14,11 +14,12 @@
 class Flashcard
     {
 public:
-    Flashcard(std::string symbol, std::string meaning);
+    Flashcard(const std::string symbol, const std::string translation);
     virtual ~Flashcard();
 
     std::string getSymbol();
     std::string getTranslation();
+    bool isEmpty();
 
 private:
     std::string _symbol;

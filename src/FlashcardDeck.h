@@ -16,12 +16,13 @@
 class FlashcardDeck : public std::vector<Flashcard>
     {
 public:
-    FlashcardDeck(std::string deck_name);
+    FlashcardDeck(const std::string deck_name);
     virtual ~FlashcardDeck();
 
     std::string getDeckName();
-    std::string getSymbol(std::string translation);
-    std::string getTranslation(std::string symbol);
+    std::string getSymbol(const std::string translation);
+    std::string getTranslation(const std::string symbol);
+    Flashcard getFlashcard(const std::string symbol, const std::string translation);
 
 private:
     std::string _deck_name;

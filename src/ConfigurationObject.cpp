@@ -12,6 +12,7 @@
 
 ConfigurationObject::ConfigurationObject(FlashcardDecks &flashcard_decks)
     {
+
     getFlashcardDecks(flashcard_decks);
     }
 
