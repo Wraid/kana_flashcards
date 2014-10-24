@@ -25,5 +25,15 @@ FlashcardDeck FlashcardDecks::getDeck(const std::string deck_name)
 	std::exit(0);
     }
 
+void FlashcardDecks::setReady(bool ready)
+    {
+    _ready = ready;
+    }
+
+bool FlashcardDecks::isReady() const
+    {
+    return _ready;
+    }
+
 FlashcardDecks::~FlashcardDecks(){}
 

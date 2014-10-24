@@ -8,15 +8,38 @@
 
 #include <iostream>
 #include <thread>
+#include <random>
+#include <cmath>
 
 #include "LogicEngine.h"
 
-LogicEngine::LogicEngine()
+LogicEngine::LogicEngine(const FlashcardDeck &selected_deck, Transaction &transaction)
     {
-    std::cout << "Logic Engine: " << std::this_thread::get_id() << std::endl;
+    // create random number generator
+    static thread_local std::random_device rd;
+    static thread_local std::mt19937 generator(rd());
+    while (!selected_deck.isReady()) {} // wait for deck to finish being built
+    std::uniform_int_distribution<int> distribution(0, selected_deck.size());
+
+    while (true)
+        {
+        if (transaction.exit())
+            {
+            break;
+            }
+        else if (transaction.getSelectedCard().isEmpty())
+            {
+            transaction.setSelectedCard(selected_deck.at(distribution(generator)));
+            }
+        else if (!transaction.getUserInput().empty())
+            {
+//            if (transaction.getUserInput().compare(transaction.getSelectedCard().getTranslation())) // if user answered correctly
+//                transaction.setAnswer(Transaction::CORRECT);
+//            else // and if they didn't
+//                transaction.setAnswer(Transaction::INCORRECT);
+            }
+        }
     }
 
-LogicEngine::~LogicEngine()
-    {
-    }
+LogicEngine::~LogicEngine(){}
 

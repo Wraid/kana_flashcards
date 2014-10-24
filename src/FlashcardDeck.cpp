@@ -55,8 +55,15 @@ Flashcard FlashcardDeck::getFlashcard(const std::string symbol, const std::strin
     std::exit(0);
     }
 
-FlashcardDeck::~FlashcardDeck()
+void FlashcardDeck::setReady(bool ready)
     {
-    // TODO Auto-generated destructor stub
+    _ready = ready;
     }
+
+bool FlashcardDeck::isReady() const
+    {
+    return _ready;
+    }
+
+FlashcardDeck::~FlashcardDeck(){}
 

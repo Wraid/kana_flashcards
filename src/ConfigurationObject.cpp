@@ -137,11 +137,8 @@ void ConfigurationObject::getFlashcardDecks(FlashcardDecks &flashcard_decks)
 
     flashcard_decks.push_back(katakana);
 
-    std::cout << "Symbol: " << flashcard_decks.at(0).at(0).getSymbol() << "  Translation: " << flashcard_decks.at(0).at(0).getTranslation() << std::endl;
+    flashcard_decks.setReady(true);
     }
 
-ConfigurationObject::~ConfigurationObject()
-    {
-    // TODO Auto-generated destructor stub
-    }
+ConfigurationObject::~ConfigurationObject(){}
 

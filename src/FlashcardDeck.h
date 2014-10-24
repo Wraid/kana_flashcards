@@ -23,9 +23,12 @@ public:
     std::string getSymbol(const std::string translation);
     std::string getTranslation(const std::string symbol);
     Flashcard getFlashcard(const std::string symbol, const std::string translation);
+    void setReady(bool ready);
+    bool isReady() const;
 
 private:
     std::string _deck_name;
+    bool _ready = false;
     };
 
 #endif /* FLASHCARDDECK_H_ */

@@ -26,21 +26,20 @@ int main()
     // shared object to hold selected flashcards
     FlashcardDeck selected_deck ("selected_deck");
 
-    // shared object to hold randomly selected flashcard
-    Flashcard selected_card("","");
-
+    // shared object to hold transaction data between the graphical and logic engines
+    Transaction transaction;
 
     // create primary threads
     std::thread configuration_thread ([&]() {ConfigurationObject configurationObject(flashcard_decks);});
-    std::thread graphical_thread ([&]() {GraphicalEngine graphical(flashcard_decks, selected_deck, selected_card);});
-    std::thread logic_thread ([]() {LogicEngine logic;});
+    std::thread graphical_thread ([&]() {GraphicalEngine graphical(flashcard_decks, selected_deck, transaction);});
+    std::thread logic_thread ([&]() {LogicEngine logic(selected_deck, transaction);});
 
     // wait until all threads finish before exiting
     configuration_thread.join();
     graphical_thread.join();
     logic_thread.join();
 
-    std::cout << "Symbol: " << flashcard_decks.getDeck("katakana").getSymbol("a") << "  Translation: " << flashcard_decks.at(0).at(0).getTranslation() << std::endl;
+    std::cout << std::endl << "Program exited successfully" << std::endl;
 
     return 0;
     }

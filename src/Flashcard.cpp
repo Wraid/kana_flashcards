@@ -30,8 +30,5 @@ bool Flashcard::isEmpty()
         return false;
     }
 
-Flashcard::~Flashcard()
-    {
-    // TODO Auto-generated destructor stub
-    }
+Flashcard::~Flashcard(){}
 

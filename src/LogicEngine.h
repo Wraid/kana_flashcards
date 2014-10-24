@@ -7,13 +7,16 @@
  *               of the application.
  */
 
+#include "FlashcardDeck.h"
+#include "Transaction.h"
+
 #ifndef LOGICENGINE_H_
 #define LOGICENGINE_H_
 
 class LogicEngine
     {
 public:
-    LogicEngine();
+    LogicEngine(const FlashcardDeck &selected_deck, Transaction &transaction);
     virtual ~LogicEngine();
     };
 

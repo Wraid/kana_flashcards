@@ -20,6 +20,11 @@ public:
     virtual ~FlashcardDecks();
 
     FlashcardDeck getDeck(const std::string deck_name);
+    void setReady(bool ready);
+    bool isReady() const;
+
+private:
+    bool _ready = false;
     };
 
 #endif /* FLASHCARDDECKS_H_ */
