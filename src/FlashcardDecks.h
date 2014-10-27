@@ -1,7 +1,6 @@
 /**
  * Name        : FlashcardDecks.h
  * Author      : Stuart Will
- * Version     : 
  * Copyright   : 2014 Stuart Will
  * Description : Extending class for std::vector<FlashcardDeck>
  */

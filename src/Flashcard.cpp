@@ -1,7 +1,6 @@
 /**
  * Name        : Flashcard.cpp
  * Author      : Stuart Will
- * Version     : 0.01
  * Copyright   : 2014 Stuart Will
  * Description : See Flashcard.h
  */

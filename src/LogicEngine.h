@@ -1,7 +1,6 @@
 /**
  * Name        : LogicEngine.h
  * Author      : Stuart Will
- * Version     : 0.01
  * Copyright   : 2014 Stuart Will
  * Description : Primary object for controlling logical elements
  *               of the application.

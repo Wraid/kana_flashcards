@@ -1,9 +1,8 @@
 /**
  * Name        : FlashcardDecks.cpp
  * Author      : Stuart Will
- * Version     : 
  * Copyright   : 2014 Stuart Will
- * Description : 
+ * Description : See FlashcardDecks.h
  */
 
 #include <iostream>
