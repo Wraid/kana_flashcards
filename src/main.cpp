@@ -1,7 +1,7 @@
 /**
  * Name        : main.cpp
  * Author      : Stuart Will
- * Version     : 1.01
+ * Version     : 1.10
  * Copyright   : 2014 Stuart Will
  * Description : Main loop. Creates alpha flashcard container and configurable,
  *               GUI, and Logic Engine object threads.
@@ -18,7 +18,7 @@
 
 int main()
     {
-    std::cout << "Kana Flashcards v1.01" << std::endl << "Copyright: Stuart Will 2014" << std::endl << std::endl;
+    std::cout << "Kana Flashcards v1.10" << std::endl << "Copyright: Stuart Will 2014" << std::endl << std::endl;
 
     // shared object to hold all possible flashcards
     FlashcardDecks flashcard_decks;
@@ -39,7 +39,10 @@ int main()
     graphical_thread.join();
     logic_thread.join();
 
-    std::cout << std::endl << "bye" << std::endl;
+    std::cout << std::endl << "You correctly answered " << transaction.getNumberCorrect() << " flashcard"
+            << ((transaction.getNumberCorrect() > 1 || transaction.getNumberCorrect() == 0) ? "s" : "")
+            << " the first time out of a total of "
+            << transaction.getNumberCorrect() + transaction.getNumberIncorrect() << "." << std::endl;
 
     return 0;
     }

@@ -34,6 +34,7 @@ GraphicalEngine::GraphicalEngine(const FlashcardDecks &flashcard_decks, Flashcar
         while (true)
             {
             std::cout << transaction.getSelectedCard().getSymbol() << std::endl;
+            transaction.setUserWaiting(false);
 
             std::cin >> user_input;
             transaction.setUserInput(user_input);
@@ -44,6 +45,8 @@ GraphicalEngine::GraphicalEngine(const FlashcardDecks &flashcard_decks, Flashcar
                 transaction.setExit(true);
                 break;
                 }
+
+            transaction.setUserWaiting(true);
 
             // wait for logic engine to generate response
             while (Transaction::BLANK == transaction.getResponse()){}
@@ -60,6 +63,7 @@ GraphicalEngine::GraphicalEngine(const FlashcardDecks &flashcard_decks, Flashcar
                 transaction.setResponse(Transaction::BLANK);
                 }
             }
+        transaction.setUserWaiting(true);
         }
     }
 

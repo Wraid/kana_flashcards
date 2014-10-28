@@ -23,6 +23,12 @@ LogicEngine::LogicEngine(const FlashcardDeck &selected_deck, Transaction &transa
     // main processing loop
     while (true)
         {
+        // no sense in processing when the user hasn't even entered anything
+        // Also, we don't want to get in the middle of the logic loop and have
+        //     the user enter something. Oh the problems of multithreading.
+        //     My life is so hard.
+        while (!transaction.userWaiting()){};
+
         // if the user wants to quit
         if (transaction.exit())
             {
@@ -34,6 +40,7 @@ LogicEngine::LogicEngine(const FlashcardDeck &selected_deck, Transaction &transa
             {
             assert(transaction.getSelectedCard().isEmpty());
             transaction.setSelectedCard(selected_deck.at(distribution(generator)));
+            transaction.setUserWaiting(false);
             }
         // if the user is waiting on a response
         else if ("" != transaction.getUserInput())
@@ -43,12 +50,19 @@ LogicEngine::LogicEngine(const FlashcardDeck &selected_deck, Transaction &transa
             if (0 == transaction.getUserInput().compare(transaction.getSelectedCard().getTranslation()))
                 {
                 transaction.setResponse(Transaction::CORRECT);
+
+                if (transaction.firstTry())
+                    transaction.incrementNumberCorrect();
                 }
             // and if they didn't
             else
                 {
                 transaction.setResponse(Transaction::INCORRECT);
+                transaction.setFirstTry(false);
+                transaction.incrementNumberIncorrect();
                 }
+
+            transaction.setUserWaiting(false);
             }
         }
     }
