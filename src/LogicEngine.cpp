@@ -18,7 +18,7 @@ LogicEngine::LogicEngine(const FlashcardDeck &selected_deck, Transaction &transa
     static thread_local std::random_device rd;
     static thread_local std::mt19937 generator(rd());
     while (!selected_deck.isReady()) {} // wait for deck to finish being built
-    std::uniform_int_distribution<int> distribution(0, selected_deck.size());
+    std::uniform_int_distribution<long unsigned int> distribution(0, selected_deck.size());
 
     // main processing loop
     while (true)
