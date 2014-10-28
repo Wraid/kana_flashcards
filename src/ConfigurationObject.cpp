@@ -76,6 +76,79 @@ void ConfigurationObject::getFlashcardDecks(FlashcardDecks &flashcard_decks)
     hiragana.push_back(Flashcard("ろ", "ro"));
     hiragana.push_back(Flashcard("を", "wo"));
 
+    hiragana.push_back(Flashcard("が", "ga"));
+    hiragana.push_back(Flashcard("ざ", "za"));
+    hiragana.push_back(Flashcard("だ", "da"));
+    hiragana.push_back(Flashcard("ば", "ba"));
+    hiragana.push_back(Flashcard("ぱ", "pa"));
+
+    hiragana.push_back(Flashcard("ぎ", "gi"));
+    hiragana.push_back(Flashcard("じ", "ji"));
+    hiragana.push_back(Flashcard("ぢ", "di"));
+    hiragana.push_back(Flashcard("び", "bi"));
+    hiragana.push_back(Flashcard("ぴ", "pi"));
+
+    hiragana.push_back(Flashcard("ぐ", "gu"));
+    hiragana.push_back(Flashcard("ず", "zu"));
+    hiragana.push_back(Flashcard("づ", "du"));
+    hiragana.push_back(Flashcard("ぶ", "bu"));
+    hiragana.push_back(Flashcard("ぷ", "pu"));
+    hiragana.push_back(Flashcard("ゔ", "vu"));
+
+    hiragana.push_back(Flashcard("げ", "ge"));
+    hiragana.push_back(Flashcard("ぜ", "ze"));
+    hiragana.push_back(Flashcard("で", "de"));
+    hiragana.push_back(Flashcard("べ", "be"));
+    hiragana.push_back(Flashcard("ぺ", "pe"));
+
+    hiragana.push_back(Flashcard("ご", "go"));
+    hiragana.push_back(Flashcard("ぞ", "zo"));
+    hiragana.push_back(Flashcard("ど", "do"));
+    hiragana.push_back(Flashcard("ぼ", "bo"));
+    hiragana.push_back(Flashcard("ぽ", "po"));
+
+    hiragana.push_back(Flashcard("きゃ", "kya"));
+    hiragana.push_back(Flashcard("しゃ", "sha"));
+    hiragana.push_back(Flashcard("ちゃ", "cha"));
+    hiragana.push_back(Flashcard("にゃ", "nya"));
+    hiragana.push_back(Flashcard("ひゃ", "hya"));
+    hiragana.push_back(Flashcard("みゃ", "mya"));
+    hiragana.push_back(Flashcard("りゃ", "rya"));
+
+    hiragana.push_back(Flashcard("きゅ", "kyu"));
+    hiragana.push_back(Flashcard("しゅ", "shu"));
+    hiragana.push_back(Flashcard("ちゅ", "chu"));
+    hiragana.push_back(Flashcard("にゅ", "nyu"));
+    hiragana.push_back(Flashcard("ひゅ", "hyu"));
+    hiragana.push_back(Flashcard("みゅ", "myu"));
+    hiragana.push_back(Flashcard("りゅ", "ryu"));
+
+    hiragana.push_back(Flashcard("きょ", "kyo"));
+    hiragana.push_back(Flashcard("しょ", "sho"));
+    hiragana.push_back(Flashcard("ちょ", "cho"));
+    hiragana.push_back(Flashcard("にょ", "nyo"));
+    hiragana.push_back(Flashcard("ひょ", "hyo"));
+    hiragana.push_back(Flashcard("みょ", "myo"));
+    hiragana.push_back(Flashcard("りょ", "ryo"));
+
+    hiragana.push_back(Flashcard("ぎゃ", "gya"));
+    hiragana.push_back(Flashcard("じゃ", "ja"));
+    hiragana.push_back(Flashcard("ぢゃ", "dya"));
+    hiragana.push_back(Flashcard("びゃ", "bya"));
+    hiragana.push_back(Flashcard("ぴゃ", "pya"));
+
+    hiragana.push_back(Flashcard("ぎゅ", "gyu"));
+    hiragana.push_back(Flashcard("じゅ", "ju"));
+    hiragana.push_back(Flashcard("ぢゅ", "dyu"));
+    hiragana.push_back(Flashcard("びゅ", "byu"));
+    hiragana.push_back(Flashcard("ぴゅ", "pyu"));
+
+    hiragana.push_back(Flashcard("ぎょ", "gyo"));
+    hiragana.push_back(Flashcard("じょ", "jo"));
+    hiragana.push_back(Flashcard("ぢょ", "dyo"));
+    hiragana.push_back(Flashcard("びょ", "byo"));
+    hiragana.push_back(Flashcard("ぴょ", "pyo"));
+
     flashcard_decks.push_back(hiragana);
 
     // make the katakana deck
@@ -133,6 +206,79 @@ void ConfigurationObject::getFlashcardDecks(FlashcardDecks &flashcard_decks)
     katakana.push_back(Flashcard("ヨ", "yo"));
     katakana.push_back(Flashcard("ロ", "ro"));
     katakana.push_back(Flashcard("ヲ", "wo"));
+
+    katakana.push_back(Flashcard("ガ", "ga"));
+    katakana.push_back(Flashcard("ザ", "za"));
+    katakana.push_back(Flashcard("ダ", "da"));
+    katakana.push_back(Flashcard("バ", "ba"));
+    katakana.push_back(Flashcard("パ", "pa"));
+
+    katakana.push_back(Flashcard("ギ", "gi"));
+    katakana.push_back(Flashcard("ジ", "ji"));
+    katakana.push_back(Flashcard("ヂ", "di"));
+    katakana.push_back(Flashcard("ビ", "bi"));
+    katakana.push_back(Flashcard("ピ", "pi"));
+
+    katakana.push_back(Flashcard("グ", "gu"));
+    katakana.push_back(Flashcard("ズ", "zu"));
+    katakana.push_back(Flashcard("ヅ", "du"));
+    katakana.push_back(Flashcard("ブ", "bu"));
+    katakana.push_back(Flashcard("プ", "pu"));
+    katakana.push_back(Flashcard("ヴ", "vu"));
+
+    katakana.push_back(Flashcard("ゲ", "ge"));
+    katakana.push_back(Flashcard("ゼ", "ze"));
+    katakana.push_back(Flashcard("デ", "de"));
+    katakana.push_back(Flashcard("ベ", "be"));
+    katakana.push_back(Flashcard("ペ", "pe"));
+
+    katakana.push_back(Flashcard("ゴ", "go"));
+    katakana.push_back(Flashcard("ゾ", "zo"));
+    katakana.push_back(Flashcard("ド", "do"));
+    katakana.push_back(Flashcard("ボ", "bo"));
+    katakana.push_back(Flashcard("ポ", "po"));
+
+    katakana.push_back(Flashcard("キャ", "kya"));
+    katakana.push_back(Flashcard("シャ", "sha"));
+    katakana.push_back(Flashcard("チャ", "cha"));
+    katakana.push_back(Flashcard("ニャ", "nya"));
+    katakana.push_back(Flashcard("ヒャ", "hya"));
+    katakana.push_back(Flashcard("ミャ", "mya"));
+    katakana.push_back(Flashcard("リャ", "rya"));
+
+    katakana.push_back(Flashcard("キュ", "kyu"));
+    katakana.push_back(Flashcard("シュ", "shu"));
+    katakana.push_back(Flashcard("チュ", "chu"));
+    katakana.push_back(Flashcard("ニュ", "nyu"));
+    katakana.push_back(Flashcard("ヒュ", "hyu"));
+    katakana.push_back(Flashcard("ミュ", "myu"));
+    katakana.push_back(Flashcard("リュ", "ryu"));
+
+    katakana.push_back(Flashcard("キョ", "kyo"));
+    katakana.push_back(Flashcard("ショ", "sho"));
+    katakana.push_back(Flashcard("チョ", "cho"));
+    katakana.push_back(Flashcard("ニョ", "nyo"));
+    katakana.push_back(Flashcard("ヒョ", "hyo"));
+    katakana.push_back(Flashcard("ミョ", "myo"));
+    katakana.push_back(Flashcard("リョ", "ryo"));
+
+    katakana.push_back(Flashcard("ギャ", "gya"));
+    katakana.push_back(Flashcard("ジャ", "ja"));
+    katakana.push_back(Flashcard("ヂャ", "dya"));
+    katakana.push_back(Flashcard("ビャ", "bya"));
+    katakana.push_back(Flashcard("ピャ", "pya"));
+
+    katakana.push_back(Flashcard("ギュ", "gyu"));
+    katakana.push_back(Flashcard("ジュ", "ju"));
+    katakana.push_back(Flashcard("ヂュ", "dyu"));
+    katakana.push_back(Flashcard("ビュ", "byu"));
+    katakana.push_back(Flashcard("ピュ", "pyu"));
+
+    katakana.push_back(Flashcard("ギョ", "gyo"));
+    katakana.push_back(Flashcard("ジョ", "jo"));
+    katakana.push_back(Flashcard("ヂョ", "dyo"));
+    katakana.push_back(Flashcard("ビョ", "byo"));
+    katakana.push_back(Flashcard("ピョ", "pyo"));
 
     flashcard_decks.push_back(katakana);
 
